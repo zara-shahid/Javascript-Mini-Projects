@@ -2,7 +2,7 @@ document.getElementById("getWeatherBtn").addEventListener("click", getWeather);
 
 function getWeather() {
   const location = document.getElementById("locationInput").value.trim();
-  const apiKey = "2a48e0405ebab86a4c1d2589df145a4b"; // Replace with your real OpenWeather API key
+  const apiKey = "Your_API_Key"; // Replace with your real OpenWeather API key
 
   if (!location) {
     document.getElementById("weatherResult").innerHTML = "Please enter a city name.";
