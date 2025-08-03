@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6dd5fa, #2980b9);
+      color: #333;
+      overflow: hidden;
+    }
+
+    /* Card Box */
+    .box {
+      
+      background: rgb(208, 232, 248);
+      border-radius: 12px;
+      padding: 30px 25px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 0.7s ease forwards;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Heading */
+    .box p {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #2980b9;
+    }
+
+    /* Input Field */
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.2s ease;
+      text-align: center;
+      outline: none;
+      animation: slideIn 0.8s ease forwards;
+    }
+
+    input[type="text"]:focus {
+      border-color: #2980b9;
+      box-shadow: 0 0 8px rgba(41, 128, 185, 0.4);
+    }
+
+    /* Button */
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      animation: slideIn 1s ease forwards;
+    }
+
+    button:hover {
+      background: #1f6391;
+      transform: scale(1.03);
+    }
+
+    /* Weather Result */
+    #weatherResult {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 500;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    #weatherResult img {
+      width: 80px;
+      margin: 10px 0;
+    }
+
+    #weatherResult.error {
+      color: red;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p>Weather App</p>
+    <input type="text" id="locationInput" placeholder="Enter location" />
+    <button id="getWeatherBtn">Get Weather</button>
+    <div id="weatherResult">Your weather will appear here.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
