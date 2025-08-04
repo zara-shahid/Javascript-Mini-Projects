@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>💰 Expense Tracker</h1>
+        <p>Track your daily expenses easily!</p>
+    </header>
+
+    <main>
+        <!-- Expense Input Form -->
+        <section class="expense-input">
+            <form id="expenseForm">
+                <label for="expenseName">Expense Name:</label>
+                <input type="text" id="expenseName" placeholder="e.g. Coffee" required>
+
+                <label for="expenseAmount">Amount ($):</label>
+                <input type="number" id="expenseAmount" placeholder="e.g. 5" min="0" required>
+
+                <button type="submit" id="addExpense">Add Expense</button>
+            </form>
+        </section>
+
+        <!-- Expense List and Total -->
+        <section class="expense-list-section">
+            <h2>Expenses</h2>
+            <ul id="expenseList"></ul>
+            
+            <div class="total-container">
+                <h3>Total: $<span id="totalExpense">0</span></h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Zara | Simple Expense Tracker</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
